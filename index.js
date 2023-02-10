@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const Port  = process.env.Port|| 8000;
 const dotenv = require('dotenv')
 
@@ -15,7 +14,7 @@ app.use(express.json());
 app.use('/products', products);
 app.use(NotFount);
 
-
+//connected  to server
 app.listen(Port, (err)=>{
     if(err){
         console.log(`There is an error ${err}`);

@@ -8,6 +8,7 @@ const {
     updateProduct  
 }  = require('../controllers/productsController');
 
+//all the api requests
 router.route('/').get(getAllProducts);
 router.route('/create').post(createNewProduct);
 router.route('/:id').put(updateProduct);
