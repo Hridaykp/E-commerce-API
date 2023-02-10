@@ -64,7 +64,7 @@ const deleteProduct = async(req, res) => {
     }
 }
 
-const updateProductQty = async(req, res) => {
+const updateProduct = async(req, res) => {
     const {name,price, Qty} = req.body;
     try{
         const product = await Product.findByIdAndUpdate(
@@ -89,5 +89,5 @@ const updateProductQty = async(req, res) => {
 }
 
 module.exports = {
-    getAllProducts, createNewProduct, deleteProduct, updateProductQty
+    getAllProducts, createNewProduct, deleteProduct, updateProduct
 }
